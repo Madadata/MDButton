@@ -1,0 +1,111 @@
+:root {
+  /* Default Variables */
+
+  /* Primary Variables */
+
+  /* Info Variables */
+
+  /* Danger Variables */
+}
+:local(.button) {
+  display: inline-block;
+  margin: 5px 0px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  text-align: center;
+  vertical-align: center;
+
+  cursor: pointer;
+}
+
+:local(.button:focus) {
+  outline: none;
+}
+
+:local(.button[disabled]) {
+  box-shadow: none;
+  opacity: .65;
+}
+
+:local(.button[disabled]:hover) {
+  cursor: not-allowed;
+}
+
+/* default button */
+:local(.default) {
+  composes: button;
+  color: #000;
+  border-color: #ccc;
+  background-color: #fff;
+}
+
+:local(.default:hover) {
+  border-color: #adadad;
+  background-color: #e6e6e6;
+}
+
+:local(.default:active) {
+  border-color: #8c8c8c;
+  background-color: #d4d4d4;
+}
+
+/* primary button */
+:local(.primary) {
+  composes: button;
+  color: #fff;
+  border-color: #2e6da4;
+  background-color: #337ab7;
+}
+
+:local(.primary:hover) {
+  border-color: #204d74;
+  background-color: #286090;
+}
+
+:local(.primary:active) {
+  border-color: #204d74;
+  background-color: #0D3F82;
+}
+
+/* info button */
+:local(.info) {
+  composes: button;
+  color: #fff;
+  border-color: #46b8da;
+  background-color: #5bc0de;
+}
+
+:local(.info:hover) {
+  border-color: #269abc;
+  background-color: #31b0d5;
+}
+
+:local(.info:active) {
+  border-color: #269abc;
+  background-color: #00A1E1;
+}
+
+/* danger button */
+:local(.danger) {
+  composes: button;
+  color: #fff;
+  border-color: #d43f3a;
+  background-color: #d9534f;
+}
+
+:local(.danger:hover) {
+  border-color: #ac2925;
+  background-color: #c9302c;
+}
+
+:local(.danger:active) {
+  border-color: #ac2925;
+  background-color: #B30125;
+}

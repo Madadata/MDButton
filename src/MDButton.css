@@ -1,0 +1,151 @@
+:root {
+  /* Default Variables */
+  --defaultTextColor: #000;
+
+  --defaultBorderColor: #ccc;
+  --defaultBackgroundColor: #fff;
+
+  --defaultHoverBorderColor: #adadad;
+  --defaultHoverBackgroundColor: #e6e6e6;
+
+  --defaultActiveBorderColor: #8c8c8c;
+  --defaultActiveBackgroundColor: #d4d4d4;
+
+  /* Primary Variables */
+  --primaryTextColor: #fff;
+
+  --primaryBorderColor: #2e6da4;
+  --primaryBackgroundColor: #337ab7;
+
+  --primaryHoverBorderColor: #204d74;
+  --primaryHoverBackgroundColor: #286090;
+
+  --primaryActiveBorderColor: #204d74;
+  --primaryActiveBackgroundColor: #0D3F82;
+
+  /* Info Variables */
+  --infoTextColor: #fff;
+
+  --infoBorderColor: #46b8da;
+  --infoBackgroundColor: #5bc0de;
+
+  --infoHoverBorderColor: #269abc;
+  --infoHoverBackgroundColor: #31b0d5;
+
+  --infoActiveBorderColor: #269abc;
+  --infoActiveBackgroundColor: #00A1E1;
+
+  /* Danger Variables */
+  --dangerTextColor: #fff;
+
+  --dangerBorderColor: #d43f3a;
+  --dangerBackgroundColor: #d9534f;
+
+  --dangerHoverBorderColor: #ac2925;
+  --dangerHoverBackgroundColor: #c9302c;
+
+  --dangerActiveBorderColor: #ac2925;
+  --dangerActiveBackgroundColor: #B30125;
+}
+:local(.button) {
+  display: inline-block;
+  margin: 5px 0px;
+  padding: 6px 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  text-align: center;
+  vertical-align: center;
+
+  cursor: pointer;
+}
+
+:local(.button:focus) {
+  outline: none;
+}
+
+:local(.button[disabled]) {
+  box-shadow: none;
+  opacity: .65;
+}
+
+:local(.button[disabled]:hover) {
+  cursor: not-allowed;
+}
+
+/* default button */
+:local(.default) {
+  composes: button;
+  color: var(--defaultTextColor);
+  border-color: var(--defaultBorderColor);
+  background-color: var(--defaultBackgroundColor);
+}
+
+:local(.default:hover) {
+  border-color: var(--defaultHoverBorderColor);
+  background-color: var(--defaultHoverBackgroundColor);
+}
+
+:local(.default:active) {
+  border-color: var(--defaultActiveBorderColor);
+  background-color: var(--defaultActiveBackgroundColor);
+}
+
+/* primary button */
+:local(.primary) {
+  composes: button;
+  color: var(--primaryTextColor);
+  border-color: var(--primaryBorderColor);
+  background-color: var(--primaryBackgroundColor);
+}
+
+:local(.primary:hover) {
+  border-color: var(--primaryHoverBorderColor);
+  background-color: var(--primaryHoverBackgroundColor);
+}
+
+:local(.primary:active) {
+  border-color: var(--primaryActiveBorderColor);
+  background-color: var(--primaryActiveBackgroundColor);
+}
+
+/* info button */
+:local(.info) {
+  composes: button;
+  color: var(--infoTextColor);
+  border-color: var(--infoBorderColor);
+  background-color: var(--infoBackgroundColor);
+}
+
+:local(.info:hover) {
+  border-color: var(--infoHoverBorderColor);
+  background-color: var(--infoHoverBackgroundColor);
+}
+
+:local(.info:active) {
+  border-color: var(--infoActiveBorderColor);
+  background-color: var(--infoActiveBackgroundColor);
+}
+
+/* danger button */
+:local(.danger) {
+  composes: button;
+  color: var(--dangerTextColor);
+  border-color: var(--dangerBorderColor);
+  background-color: var(--dangerBackgroundColor);
+}
+
+:local(.danger:hover) {
+  border-color: var(--dangerHoverBorderColor);
+  background-color: var(--dangerHoverBackgroundColor);
+}
+
+:local(.danger:active) {
+  border-color: var(--dangerActiveBorderColor);
+  background-color: var(--dangerActiveBackgroundColor);
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mdbutton",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack && webpack-dev-server",
+    "compile:postcss": "postcss --use postcss-cssnext -d lib src/*.css",
+    "compile:source": "babel src --out-dir lib",
+    "clean": "rimraf lib dist",
+    "prepublish": "npm-run-all clean --parallel compile:source compile:postcss"
+  },
+  "keywords": [],
+  "author": "zhenghe",
+  "license": "MIT",
+  "dependencies": {
+    "react": "15.1.0",
+    "react-button": "1.2.1",
+    "react-dom": "15.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "6.3.6",
+    "css-loader": "0.23.1",
+    "ghooks": "1.2.4",
+    "npm-run-all": "2.2.2",
+    "postcss": "5.0.21",
+    "postcss-cssnext": "2.6.0",
+    "style-loader": "0.13.1"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run prepublish"
+    }
+  }
+}
