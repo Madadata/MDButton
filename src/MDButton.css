@@ -47,7 +47,7 @@
   --dangerActiveBorderColor: #ac2925;
   --dangerActiveBackgroundColor: #B30125;
 }
-:local(.button) {
+@define-extend .md-btn {
   display: inline-block;
   margin: 5px 0px;
   padding: 6px 12px;
@@ -65,87 +65,87 @@
   cursor: pointer;
 }
 
-:local(.button:focus) {
+.md-btn:focus {
   outline: none;
 }
 
-:local(.button[disabled]) {
+.md-btn[disabled] {
   box-shadow: none;
   opacity: .65;
 }
 
-:local(.button[disabled]:hover) {
+.md-btn[disabled]:hover {
   cursor: not-allowed;
 }
 
 /* default button */
-:local(.default) {
-  composes: button;
+.md-btn-default {
+  @extend .md-btn;
   color: var(--defaultTextColor);
   border-color: var(--defaultBorderColor);
   background-color: var(--defaultBackgroundColor);
 }
 
-:local(.default:hover) {
+.md-btn-default:hover {
   border-color: var(--defaultHoverBorderColor);
   background-color: var(--defaultHoverBackgroundColor);
 }
 
-:local(.default:active) {
+.md-btn-default:active {
   border-color: var(--defaultActiveBorderColor);
   background-color: var(--defaultActiveBackgroundColor);
 }
 
 /* primary button */
-:local(.primary) {
-  composes: button;
+.md-btn-primary {
+  @extend .md-btn;
   color: var(--primaryTextColor);
   border-color: var(--primaryBorderColor);
   background-color: var(--primaryBackgroundColor);
 }
 
-:local(.primary:hover) {
+.md-btn-primary:hover {
   border-color: var(--primaryHoverBorderColor);
   background-color: var(--primaryHoverBackgroundColor);
 }
 
-:local(.primary:active) {
+.md-btn-primary:active {
   border-color: var(--primaryActiveBorderColor);
   background-color: var(--primaryActiveBackgroundColor);
 }
 
 /* info button */
-:local(.info) {
-  composes: button;
+.md-btn-info {
+  @extend .md-btn;
   color: var(--infoTextColor);
   border-color: var(--infoBorderColor);
   background-color: var(--infoBackgroundColor);
 }
 
-:local(.info:hover) {
+.md-btn-info:hover {
   border-color: var(--infoHoverBorderColor);
   background-color: var(--infoHoverBackgroundColor);
 }
 
-:local(.info:active) {
+.md-btn-info:active {
   border-color: var(--infoActiveBorderColor);
   background-color: var(--infoActiveBackgroundColor);
 }
 
 /* danger button */
-:local(.danger) {
-  composes: button;
+.md-btn-danger {
+  @extend .md-btn;
   color: var(--dangerTextColor);
   border-color: var(--dangerBorderColor);
   background-color: var(--dangerBackgroundColor);
 }
 
-:local(.danger:hover) {
+.md-btn-danger:hover {
   border-color: var(--dangerHoverBorderColor);
   background-color: var(--dangerHoverBackgroundColor);
 }
 
-:local(.danger:active) {
+.md-btn-danger:active {
   border-color: var(--dangerActiveBorderColor);
   background-color: var(--dangerActiveBackgroundColor);
 }

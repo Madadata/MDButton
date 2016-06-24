@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack && webpack-dev-server",
-    "compile:postcss": "postcss --use postcss-cssnext -d lib src/*.css",
+    "compile:postcss": "postcss  --use precss --use postcss-cssnext -d lib src/*.css",
     "compile:source": "babel src --out-dir lib",
     "clean": "rimraf lib dist",
     "prepublish": "npm-run-all clean --parallel compile:source compile:postcss"
@@ -14,8 +14,8 @@
   "author": "zhenghe",
   "license": "MIT",
   "dependencies": {
+    "classnames": "2.2.5",
     "react": "15.1.0",
-    "react-button": "1.2.1",
     "react-dom": "15.1.0"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
     "npm-run-all": "2.2.2",
     "postcss": "5.0.21",
     "postcss-cssnext": "2.6.0",
+    "precss": "1.4.0",
     "style-loader": "0.13.1"
   },
   "config": {

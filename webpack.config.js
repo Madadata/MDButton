@@ -1,4 +1,5 @@
 const cssnext = require('postcss-cssnext');
+const precss = require('precss');
 
 module.exports = {
   entry: './main.js',
@@ -32,6 +33,7 @@ module.exports = {
   },
   postcss: function () {
     return [
+      precss,
       cssnext
     ];
   }

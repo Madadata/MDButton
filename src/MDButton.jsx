@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import styles from './MDButton.css';
+import classNames from 'classnames';
+import './MDButton.css';
 
 class MDButton extends Component {
 
@@ -57,7 +58,7 @@ class MDButton extends Component {
           onMouseDown={this.handleMouseDown}
           onMouseUp={this.handleMouseUp}
           disabled={isDisabled}
-          className={styles[theme]}
+          className={classNames('md-btn', `md-btn-${theme}`)}
         >
           {text}
         </button>
