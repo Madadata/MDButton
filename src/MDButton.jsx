@@ -47,7 +47,14 @@ class MDButton extends Component {
   }
 
   render() {
-    const { isDisabled, theme, href, text } = this.props;
+    const {
+      isDisabled,
+      theme,
+      href,
+      text,
+      children,
+    } = this.props;
+
     return (
       <a href={href}>
         <button
@@ -61,6 +68,7 @@ class MDButton extends Component {
           className={classNames('md-btn', `md-btn-${theme}`)}
         >
           {text}
+          {children}
         </button>
       </a>
     );
