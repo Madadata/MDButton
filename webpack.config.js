@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = {
   entry: './main.js',
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'dist'),
     filename: 'index.js',
     publicPath: '/dist/'
   },
