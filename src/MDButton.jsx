@@ -67,7 +67,6 @@ class MDButton extends Component {
           disabled={isDisabled}
           className={classNames('md-btn', `md-btn-${theme}`)}
         >
-          {text}
           {children}
         </button>
       </a>
@@ -87,14 +86,12 @@ MDButton.propTypes = {
   isDisabled: PropTypes.bool,
   href: PropTypes.string,
   theme: PropTypes.string,
-  text: PropTypes.string,
 };
 
 MDButton.defaultProps = {
   isDisabled: false,
   href: '#',
   theme: 'primary',
-  text: 'button'
 };
 
 export default MDButton;

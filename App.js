@@ -4,7 +4,7 @@ import MDButton from './src/MDButton.jsx';
 const App = () => (
   <div>
     <MDButton>
-      <span>{' world'}</span>
+      <span>Hello</span>
     </MDButton>
   </div>
 );
