@@ -1,18 +1,19 @@
+const webpack = require('webpack');
 const cssnext = require('postcss-cssnext');
 const precss = require('precss');
+const path = require('path');
 
 module.exports = {
   entry: './main.js',
   output: {
-    path: './dist',
+    path: __dirname,
     filename: 'index.js',
+    publicPath: '/dist/'
   },
   devServer: {
     inline: true,
+    hot: true,
     port: 3000,
-    contentBase: '.',
-    publicPath: './dist',
-    filename: 'index.js'
   },
   module: {
     loaders: [
@@ -21,7 +22,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react', 'stage-0'],
+          presets: ['es2015', 'stage-0', 'react', 'react-hmre'],
         }
       },
       {

@@ -4,7 +4,7 @@
   "description": "MDButton is an easy to use button component",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack && webpack-dev-server",
+    "dev": "webpack && webpack-dev-server --inline --hot",
     "compile:postcss": "postcss --use precss --use postcss-cssnext -d lib src/*.css",
     "compile:source": "babel src --out-dir lib",
     "clean": "rimraf lib dist",
@@ -32,6 +32,7 @@
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "6.9.0",
     "babel-preset-react": "6.5.0",
+    "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-0": "6.5.0",
     "chai": "^3.5.0",
     "classnames": "2.2.5",
