@@ -10,11 +10,6 @@ module.exports = {
     filename: 'index.js',
     publicPath: '/dist/'
   },
-  devServer: {
-    inline: true,
-    hot: true,
-    port: 3000,
-  },
   module: {
     loaders: [
       {
