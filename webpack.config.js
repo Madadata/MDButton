@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const cssnext = require('postcss-cssnext');
 const precss = require('precss');
 const path = require('path');
