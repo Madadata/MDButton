@@ -6,71 +6,39 @@ class MDButton extends Component {
 
   constructor() {
     super();
-    this.state = {
-      mouseOver: false,
-      active: false,
-    };
-    this.handleClick = this.onClick.bind(this);
-    this.handleDoubleClick = this.onDoubleClick.bind(this);
-    this.handleMouseEnter = this.onMouseEnter.bind(this);
-    this.handleMouseLeave = this.onMouseLeave.bind(this);
-    this.handleMouseDown = this.onMouseDown.bind(this);
-    this.handleMouseUp = this.onMouseUp.bind(this);
   }
 
   hasInProps(propName) {
     return propName in this.props;
   }
 
-  onClick() {
-    if (this.hasInProps('onClick')) { this.props.onClick(); }
-  }
+  getButton() {
+    const buttonProps = {};
+    let theme = 'default';
+    if (this.hasInProps('onClick')) { buttonProps.onClick = this.props.onClick; }
+    if (this.hasInProps('onDoubleClick')) { buttonProps.onDoubleClick = this.props.onDoubleClick; }
+    if (this.hasInProps('onMouseEnter')) { buttonProps.onMouseEnter = this.props.onMouseEnter; }
+    if (this.hasInProps('onMouseLeave')) { buttonProps.onMouseLeave = this.props.onMouseLeave; }
+    if (this.hasInProps('onMouseUp')) { buttonProps.onMouseUp = this.props.onMouseUp; }
+    if (this.hasInProps('onMouseDown')) { buttonProps.onMouseDown = this.props.onMouseDown; }
+    if (this.hasInProps('isDisabled')) { buttonProps.isDisabled = this.props.isDisabled; }
+    if (this.hasInProps('theme')) { theme = this.props.theme; }
 
-  onDoubleClick() {
-    if (this.hasInProps('onDoubleClick')) { this.props.onDoubleClick(); }
-  }
-
-  onMouseEnter() {
-    if (this.hasInProps('onMouseEnter')) { this.props.onMouseEnter(); }
-  }
-
-  onMouseLeave() {
-    if (this.hasInProps('onMouseLeave')) { this.props.onMouseLeave(); }
-  }
-
-  onMouseUp() {
-    if (this.hasInProps('onMouseUp')) { this.props.onMouseUp(); }
-  }
-
-  onMouseDown() {
-    if (this.hasInProps('onMouseDown')) { this.props.onMouseDown(); }
+    return (
+      <button
+        {...buttonProps}
+        className={classNames('md-btn', `md-btn-${theme}`)}
+      >
+        {this.props.children}
+      </button>
+    );
   }
 
   render() {
-    const {
-      isDisabled,
-      theme,
-      href,
-      text,
-      children,
-    } = this.props;
-
-    return (
-      <a href={href}>
-        <button
-          onClick={this.handleClick}
-          onDoubleClick={this.handleDoubleClick}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-          onMouseDown={this.handleMouseDown}
-          onMouseUp={this.handleMouseUp}
-          disabled={isDisabled}
-          className={classNames('md-btn', `md-btn-${theme}`)}
-        >
-          {children}
-        </button>
-      </a>
-    );
+    const button = this.getButton();
+    const { href } = this.props;
+    const content = !!href ? <a href={href}>{button}</a> : button;
+    return content;
   }
 
 }
@@ -86,12 +54,6 @@ MDButton.propTypes = {
   isDisabled: PropTypes.bool,
   href: PropTypes.string,
   theme: PropTypes.string,
-};
-
-MDButton.defaultProps = {
-  isDisabled: false,
-  href: '#',
-  theme: 'primary',
 };
 
 export default MDButton;
