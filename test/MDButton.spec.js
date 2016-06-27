@@ -3,7 +3,7 @@ import jsdom from 'mocha-jsdom';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import MDButton from '../src/MDButton';
+import MDButton from 'src/MDButton';
 
 const expect = chai.expect;
 

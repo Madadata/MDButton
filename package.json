@@ -9,7 +9,9 @@
     "compile:postcss": "postcss  --use precss --use postcss-cssnext -d lib src/*.css",
     "compile:source": "babel src --out-dir lib",
     "clean": "rimraf lib dist",
-    "prepublish": "npm-run-all clean compile"
+    "prepublish": "npm-run-all clean compile",
+    "test:watch": "mocha --watch",
+    "test": "mocha"
   },
   "repository": "https://github.com/Madadata/MDButton",
   "keywords": [
@@ -29,6 +31,7 @@
     "babel-cli": "6.10.1",
     "babel-core": "6.10.4",
     "babel-loader": "6.2.4",
+    "babel-plugin-module-alias": "1.5.0",
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "6.9.0",
     "babel-preset-react": "6.5.0",
