@@ -2,9 +2,11 @@
 
 [![Build
 Status](https://travis-ci.org/Madadata/MDButton.svg?branch=master)](https://travis-ci.org/Madadata/MDButton)
-[![npm](https://img.shields.io/npm/dm/localeval.svg?maxAge=2592000)]()
-[![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg?maxAge=2592000)]()
-[![DUB](https://img.shields.io/dub/l/vibe-d.svg?maxAge=2592000)]()
+[![GitHub version](https://badge.fury.io/gh/Madadata%2FMDButton.svg)](https://badge.fury.io/gh/Madadata%2FMDButton)
+[![GitHub issues](https://img.shields.io/github/issues/Madadata/MDButton.svg)](https://github.com/Madadata/MDButton/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Madadata/MDButton/master/LICENSE)
+
+[![NPM](https://nodei.co/npm/mdbutton.png)](https://nodei.co/npm/mdbutton/)
 
 A react button component
 
