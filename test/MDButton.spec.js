@@ -44,6 +44,23 @@ describe('MDButton', () => {
     );
     const actualElement = renderer.getRenderOutput();
     expect(actualElement.type).toEqual('a');
+  });
+
+  it('should render a button typed button if not type is specified', () => {
+    const renderer = createRenderer();
+    renderer.render(<MDButton />);
+    const actualElement = renderer.getRenderOutput();
+    expect(actualElement.props.type).toEqual('button');
   })
 
+  it('should render a typed button if type is specified', () => {
+    const renderer = createRenderer();
+    renderer.render(
+      <MDButton
+        type="submit"
+      />
+    );
+    const actualElement = renderer.getRenderOutput();
+    expect(actualElement.props.type).toEqual('submit');
+  })
 });

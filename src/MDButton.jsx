@@ -23,6 +23,7 @@ class MDButton extends Component {
     if (this.hasInProps('onMouseDown')) { buttonProps.onMouseDown = this.props.onMouseDown; }
     if (this.hasInProps('isDisabled')) { buttonProps.isDisabled = this.props.isDisabled; }
     if (this.hasInProps('theme')) { theme = this.props.theme; }
+    buttonProps.type = this.props.type || 'button';
 
     return (
       <button
@@ -54,6 +55,7 @@ MDButton.propTypes = {
   isDisabled: PropTypes.bool,
   href: PropTypes.string,
   theme: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default MDButton;
