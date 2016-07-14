@@ -2,6 +2,7 @@
 
 [![Build
 Status](https://travis-ci.org/Madadata/MDButton.svg?branch=master)](https://travis-ci.org/Madadata/MDButton)
+[![Dependency Status](https://dependencyci.com/github/Madadata/MDButton/badge)](https://dependencyci.com/github/Madadata/MDButton)
 [![GitHub version](https://badge.fury.io/gh/Madadata%2FMDButton.svg)](https://badge.fury.io/gh/Madadata%2FMDButton)
 [![GitHub issues](https://img.shields.io/github/issues/Madadata/MDButton.svg)](https://github.com/Madadata/MDButton/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Madadata/MDButton/master/LICENSE)
