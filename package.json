@@ -1,6 +1,6 @@
 {
   "name": "mdbutton",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "MDButton is an easy to use button component",
   "main": "index.js",
   "scripts": {
