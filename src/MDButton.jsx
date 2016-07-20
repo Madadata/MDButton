@@ -4,14 +4,6 @@ import './MDButton.css';
 
 class MDButton extends Component {
 
-  constructor() {
-    super();
-  }
-
-  hasInProps(propName) {
-    return propName in this.props;
-  }
-
   getButton() {
     const buttonProps = {};
     let theme = 'default';
@@ -35,6 +27,10 @@ class MDButton extends Component {
     );
   }
 
+  hasInProps(propName) {
+    return propName in this.props;
+  }
+
   render() {
     const button = this.getButton();
     const { href } = this.props;
@@ -45,6 +41,8 @@ class MDButton extends Component {
 }
 
 MDButton.propTypes = {
+  children: PropTypes.object,
+
   onClick: PropTypes.func,
   onDoubleClick: PropTypes.func,
   onMouseEnter: PropTypes.func,
