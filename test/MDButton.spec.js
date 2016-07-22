@@ -63,4 +63,16 @@ describe('MDButton', () => {
     const actualElement = renderer.getRenderOutput();
     expect(actualElement.props.type).toEqual('submit');
   })
+
+  it('should render a disabled button if isDisabled is true', () => {
+    const renderer = createRenderer();
+    renderer.render(
+      <MDButton
+        isDisabled
+      />
+    );
+    const actualElement = renderer.getRenderOutput();
+    // expect(actualElement.props)
+    expect(actualElement.props.disabled).toBe(true);
+  })
 });

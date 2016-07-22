@@ -3,7 +3,9 @@ import MDButton from './src/MDButton.jsx';
 
 const App = () => (
   <div>
-    <MDButton>
+    <MDButton
+      isDisabled
+    >
       hello world!!
     </MDButton>
   </div>
