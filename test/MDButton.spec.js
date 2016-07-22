@@ -72,7 +72,6 @@ describe('MDButton', () => {
       />
     );
     const actualElement = renderer.getRenderOutput();
-    // expect(actualElement.props)
     expect(actualElement.props.disabled).toBe(true);
   })
 });
