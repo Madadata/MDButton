@@ -4,7 +4,7 @@ import MDButton from './src/MDButton.jsx';
 const App = () => (
   <div>
     <MDButton
-      isDisabled
+      type='reset'
     >
       hello world!!
     </MDButton>

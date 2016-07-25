@@ -41,8 +41,10 @@ class MDButton extends Component {
 }
 
 MDButton.propTypes = {
-  children: PropTypes.any,
-
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
   onClick: PropTypes.func,
   onDoubleClick: PropTypes.func,
   onMouseEnter: PropTypes.func,
@@ -53,7 +55,11 @@ MDButton.propTypes = {
   isDisabled: PropTypes.bool,
   href: PropTypes.string,
   theme: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf([
+    'button',
+    'submit',
+    'reset',
+  ]),
 };
 
 export default MDButton;
