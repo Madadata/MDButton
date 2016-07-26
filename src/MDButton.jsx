@@ -13,7 +13,7 @@ class MDButton extends Component {
     if (this.hasInProps('onMouseLeave')) { buttonProps.onMouseLeave = this.props.onMouseLeave; }
     if (this.hasInProps('onMouseUp')) { buttonProps.onMouseUp = this.props.onMouseUp; }
     if (this.hasInProps('onMouseDown')) { buttonProps.onMouseDown = this.props.onMouseDown; }
-    if (this.hasInProps('isDisabled')) { buttonProps.isDisabled = this.props.isDisabled; }
+    if (this.hasInProps('isDisabled')) { buttonProps.disabled = this.props.isDisabled; }
     if (this.hasInProps('theme')) { theme = this.props.theme; }
     buttonProps.type = this.props.type || 'button';
 
@@ -41,8 +41,10 @@ class MDButton extends Component {
 }
 
 MDButton.propTypes = {
-  children: PropTypes.object,
-
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
   onClick: PropTypes.func,
   onDoubleClick: PropTypes.func,
   onMouseEnter: PropTypes.func,
@@ -53,7 +55,11 @@ MDButton.propTypes = {
   isDisabled: PropTypes.bool,
   href: PropTypes.string,
   theme: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf([
+    'button',
+    'submit',
+    'reset',
+  ]),
 };
 
 export default MDButton;

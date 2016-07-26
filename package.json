@@ -1,6 +1,6 @@
 {
   "name": "mdbutton",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "MDButton is an easy to use button component",
   "main": "index.js",
   "scripts": {
@@ -66,7 +66,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run prepublish"
+      "pre-push": "npm run clean"
     }
   }
 }
