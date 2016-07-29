@@ -62,6 +62,8 @@ MDButton.propTypes = {
     'submit',
     'reset',
   ]),
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 
 export default MDButton;
