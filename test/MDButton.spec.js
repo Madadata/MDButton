@@ -74,4 +74,17 @@ describe('MDButton', () => {
     const actualElement = renderer.getRenderOutput();
     expect(actualElement.props.disabled).toBe(true);
   })
+
+  it('should render a button with given width and height', () => {
+    const renderer = createRenderer();
+    renderer.render(
+      <MDButton
+        height={100}
+        width={200}
+      />
+  );
+
+  const actualElement = renderer.getRenderOutput();
+  expect(actualElement.props.style).toInclude({ width: 200, height: 100 });
+  });
 });
