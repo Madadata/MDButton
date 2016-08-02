@@ -6,6 +6,7 @@ class MDButton extends Component {
 
   getButton() {
     const buttonProps = {};
+    const { width, height } = this.props;
     let theme = 'default';
     if (this.hasInProps('onClick')) { buttonProps.onClick = this.props.onClick; }
     if (this.hasInProps('onDoubleClick')) { buttonProps.onDoubleClick = this.props.onDoubleClick; }
@@ -15,6 +16,7 @@ class MDButton extends Component {
     if (this.hasInProps('onMouseDown')) { buttonProps.onMouseDown = this.props.onMouseDown; }
     if (this.hasInProps('isDisabled')) { buttonProps.disabled = this.props.isDisabled; }
     if (this.hasInProps('theme')) { theme = this.props.theme; }
+    if (!!width && !!height) { buttonProps.style = { width, height }; }
     buttonProps.type = this.props.type || 'button';
 
     return (
@@ -60,6 +62,8 @@ MDButton.propTypes = {
     'submit',
     'reset',
   ]),
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 
 export default MDButton;

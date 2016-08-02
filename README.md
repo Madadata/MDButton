@@ -29,3 +29,5 @@ A react button component
 * **isDisabled**: Bool - determine whether or not the button is disabled.
 * **theme**: String['default', 'primary', 'danger'] - bootstrap like theme.
 * **href**: String - url redirect after clicked.
+* **width**: Number - width of the button
+* **height**: Number - height of the button
